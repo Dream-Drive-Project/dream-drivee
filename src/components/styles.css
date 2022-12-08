@@ -1,0 +1,351 @@
+/* styles.css */
+
+/*
+colors: pacifico
+	dark blue/gray background color: #424759
+	slightly lighter version: #42495c
+	dark purple: #56506c
+	purple: #73587b
+	red-toned purple: #824d67
+	dusty rose pink: #b76f83
+	salmon pink: #e6877f
+	yellow-orange: #f2b572
+	yellow: #e5ce82
+	orange: #e8835e
+	red:  #cb5a56
+	red-purple: #9b5668
+colors: pacifico deluxe
+	light tan: #e3dcc2
+	salmon: #f4a898
+	pink: #e38b9b
+	darker pink: #b86b8d
+	purple: #8b638f
+	blue-purple: #66567d
+	dark gray purple: #564967
+	dark purple: #59425f
+	plum: #52364c
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+/* This is for the entire webpage */
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	background-image: linear-gradient(#e3dcc2, #e38b9b, #59425f);
+	color: #66567d;  /* blue-purple */
+	background-attachment: fixed;
+}
+
+body, html {
+	height: 100%;
+  }
+  
+  .bg {
+	/* The image used */
+	background-image: linear-gradient(#e3dcc2, #e38b9b, #59425f);
+  
+	/* Full height */
+	height: 100%;
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+h1 {
+	color: #b86b8d; /* darker pink */
+	font-weight: 600;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	color: #8b638f; /* purple */
+	font-weight: 600;
+
+}
+
+h3 {
+	color: #564967; /* dark gray purple */
+}
+
+h4 {
+	color: #59425f; /* dark purple */
+}
+
+h5 {
+	color: #52364c; /* plum */
+}
+
+h6 {
+	color: #e38b9b; /* pink */
+}
+
+/* button class */
+.btn {
+	font-family: 'Poppins', sans-serif;
+  	background-color: #66567d; /* blue-purple */
+  	border: none;
+  	color: #e38b9b; /* pink */
+  	padding: 10px 24px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+	border-radius: 8px; /* rounds the corners */
+	box-shadow: 0 9px #999;
+	width: auto;
+}
+
+.btn:hover {
+	background-color: #5c4d71; /* darker version of the button when hovering over button */
+}
+
+.btn:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+.add-btn {
+	font-family: 'Poppins', sans-serif;
+  	background-color: #e38b9b; /* blue-purple */
+  	border: none;
+  	color: #66567d; /* pink */
+  	padding: 5px;
+  	text-align: center;
+  	text-decoration: none;
+	font-weight: 500;
+  	display: inline-block;
+  	font-size: 12px;
+	border-radius: 6px; /* rounds the corners */
+	box-shadow: 0 5px #999;
+	width: auto;
+	margin: 5px;
+}
+
+.add-btn:hover {
+	background-color: #cc7d8c; /* darker version of the button when hovering over button */
+}
+
+.add-btn:active {
+	box-shadow: 0 2px #666;
+	transform: translateY(4px);
+}
+
+.rmv-btn:active {
+	box-shadow: 0 2px #666;
+	transform: translateY(4px);
+}
+
+.rmv-btn {
+	font-family: 'Poppins', sans-serif;
+  	background-color: #e3dcc2; /* blue-purple */
+  	border: none;
+  	color: #66567d; /* pink */
+  	padding: 5px;
+  	text-align: center;
+  	text-decoration: none;
+	font-weight: 500;
+  	display: inline-flex;
+  	font-size: 12px;
+	border-radius: 6px; /* rounds the corners */
+	box-shadow: 0 5px #999;
+	width: auto;
+	margin: 5px;
+	position:absolute;
+}
+
+.rmv-btn:hover {
+	background-color: #ccc6af; /* darker version of the button when hovering over button */
+}
+
+
+
+input {
+	background-color: #f4a898; /* salmon */
+	color: #52364c; /* plum */
+	font-family: 'Poppins', sans-serif;
+	border-radius: 4px; /* rounds the corners */
+	margin: 3px 0;
+	padding: 5px;
+	width: 50%;
+	border: 0.5px solid #52364c;
+}
+
+::placeholder{
+	color: #755e70;
+}
+
+
+
+.AC {
+	margin: auto;
+  	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.form-inner {
+	margin: auto;
+	width: 50%;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+	align-items: flex-start;
+}
+
+.form-group {
+	font-weight: 600;
+	
+}
+
+.dreamSummary {
+	width: 50%;
+	height: 150px;
+	padding: 12px 5px;
+	border-radius: 4px;
+	background-color: #f4a898; /* salmon */
+	color: #52364c; /* plum */
+	resize: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+	background-color: #e3dcc2;
+}
+
+label {
+	font-weight: 600;
+}
+
+select {
+	background-color: #f4a898; /* salmon */
+	color: #52364c; /* plum */
+	font-family: 'Poppins', sans-serif;
+	border-radius: 4px; /* rounds the corners */
+	margin: 3px 0;
+	padding: 5px;
+	width: 50%;
+	border: 0.5px solid #52364c;
+}
+
+.site-title {
+	font-size: 2rem;
+}
+
+.nav {
+	background-color: #59425f;
+	color: #e3dcc2;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 2rem;
+	padding: 0 1rem;
+
+}
+
+.nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+}
+
+.nav a {
+	color: inherit;
+	text-decoration: none;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: .25rem;
+}
+
+.nav li.active {
+	background-color: #b86b8d;
+}
+
+.nav li:hover {
+	background-color: #e38b9b;
+}
+
+.container {
+	margin: 1rem;
+	text-align: center;
+}
+
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+textarea {
+	border: 0.5px solid #52364c;
+}
+
+.link {
+	color: #e3dcc2;
+}
+
+.link:hover {
+	color: #d7cda8;
+}
+
+.linkpadding {
+	padding: 5px;
+}
+
+thead {
+	background-color: rgb(86,73,103,.9);
+	color: #e38b9b;
+}
+
+tbody {
+	color: #564967;
+	background-color:rgb(220,181,198,.55);
+	
+}
+
+th, td {
+	border: 1px solid;
+	padding: 5px;
+}
+
+table {
+	width: 100%;
+	padding-bottom: 5rem;
+}
+
+.dream-search {
+	background-color: #e9a2af;
+}
+
+.required-message {
+	padding-bottom: 5rem;
+}
+
+.search-style {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.login-label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	padding-right: 5px;
+}
