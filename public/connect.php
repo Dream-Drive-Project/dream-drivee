@@ -3,10 +3,10 @@
  
 
  
-$dbUsername ="root";
-$dbPassword="password";
-$dbname ="dreamdrive";
-$conn = new mysqli('localhost',$dbUsername,'',$dbname);
+$dbUsername ="R3zOnZCcuB";
+$dbPassword="JMYUdEV9mY";
+$dbname ="R3zOnZCcuB";
+$conn = new mysqli('remotemysql.com',$dbUsername,'$dbPassword',$dbname);
 
 
 if ($conn->connect_error) {
