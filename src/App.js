@@ -198,7 +198,7 @@ const bye = () =>{
           <Route path="/Home" element={<Home bye={bye} />} />
           <Route path="/dreamform" element={<DreamForm  APILOGIN={APILOGIN}  VIEWLOG ={VIEWLOG} bye={bye} />} />
           <Route path="/viewlogs" element={<ViewLogs  USERLOGIN={USERLOGIN} VIEWLOG={VIEWLOG}  loaddream={loaddream} bye={bye}  />} />
-          <Route path="/viewstats" element={<ViewStats bye={bye} />} />
+          <Route path="/viewstats" element={<ViewStats bye={bye} loaddream={loaddream} />} />
           <Route path="/UserProfile" element={<UserProfile APILOGIN={APILOGIN} Login={Login} userinput={userinput} bye={bye} />} />
           <Route path="/LogoutPage" element={<LogoutPage  Logout={Logout} bye={bye} />} />
         </Routes>
