@@ -168,14 +168,14 @@ const removeFields = (index) => {
         <h1>New Dream Form</h1>
 
     <div className = 'form-category'>
-        <label for="dream-date">*Date:</label>
+        <label for="dream-date">Date:</label>
     </div>
     <div className ='form-group'>
         <input placeholder="Date"type="text" required onFocus={(e) => e.target.type = 'date'} id="dream-date" onChange ={e => setDreamdetails({...Dreamdetails,dreamdate:e.target.value})} value={Dreamdetails.dreamdate}/>
     </div>
 
     <div className = 'form-category'>
-    <label for="dream-type">*Type of Dream: </label>
+    <label for="dream-type">Type of Dream: </label>
     </div>
     <div className ='form-group'>
         <select id="dream-type" name="dream-type" required onChange ={e => setDreamdetails({...Dreamdetails,type:e.target.value})} value={Dreamdetails.type}>
@@ -296,12 +296,12 @@ const removeFields = (index) => {
 
     )
   })}
-    <div><button className='add-btn' onClick={addFields}>Add More..</button></div>
+    <div><button className='add-btn' onClick={addFields}>Add Character</button></div>
     {/*<div className ='form-group'>
         <input id='dream-character' type='text' placeholder ='Character' maxLength={30} onChange ={e => setDreamdetails({...Dreamdetails,characters:e.target.value})} value={Dreamdetails.characters}/>
     </div>*/}
     <div className = 'form-category'>
-        <label for='dream-summary'>*Dream Summary: </label>
+        <label for='dream-summary'>Dream Summary: </label>
     </div>
     <div className ='form-group'>
         <textarea id='dream-summary' className ='dreamSummary' type='textarea' placeholder ='Dream Summary' required maxLength={2000} onChange ={e => setDreamdetails({...Dreamdetails,summary:e.target.value})} value={Dreamdetails.summary}/>
@@ -309,7 +309,6 @@ const removeFields = (index) => {
 
 
     <input className = "btn" type="submit" value ="Submit Dream" />
-    <h6 className="required-message">* represents a required field</h6>
     </div>
 
 
