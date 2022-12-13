@@ -1,20 +1,9 @@
 /* styles.css */
 
 /*
-colors: pacifico
-	dark blue/gray background color: #424759
-	slightly lighter version: #42495c
-	dark purple: #56506c
-	purple: #73587b
-	red-toned purple: #824d67
-	dusty rose pink: #b76f83
-	salmon pink: #e6877f
-	yellow-orange: #f2b572
-	yellow: #e5ce82
-	orange: #e8835e
-	red:  #cb5a56
-	red-purple: #9b5668
-colors: pacifico deluxe
+
+
+colors:
 	light tan: #e3dcc2
 	salmon: #f4a898
 	pink: #e38b9b
@@ -24,6 +13,7 @@ colors: pacifico deluxe
 	dark gray purple: #564967
 	dark purple: #59425f
 	plum: #52364c
+
 */
 
 
@@ -348,4 +338,21 @@ table {
 	width: 100px;
 	text-align: right;
 	padding-right: 5px;
+}
+
+
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    box-shadow: 0 0 0 30px #f4a898 inset !important;
+	-webkit-text-fill-color: #52364c !important;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+img {
+	max-width: 50%;
+	height: auto;
 }
