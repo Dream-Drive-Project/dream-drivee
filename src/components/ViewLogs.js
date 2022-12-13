@@ -4,9 +4,9 @@ import React, {useEffect, useState} from 'react'
 
 import axios from 'axios';
 
-export function ViewLogs({USERLOGIN,VIEWLOG,loaddream,bye}) {
-
+export function ViewLogs({USERLOGIN,VIEWLOG,loaddream, bye}) {
   bye();
+
     const [Dreamdetails,setDreamdetails] = useState({dreamdate:"",summary:"", type:"",mood:"",duration:"",substance:"",username:USERLOGIN.username, characters:""});
     
      // searches substance
@@ -90,11 +90,12 @@ export function ViewLogs({USERLOGIN,VIEWLOG,loaddream,bye}) {
     return (
        
     <div>
-      {console.log(data2)}
-      {console.log("length of data2: "+ data2.length )}
         <h1>View Logs</h1>
 
         <div className='search-style'>
+
+        <input className='dream-search' placeholder="Search by Date"type="text" required onFocus={(e) => e.target.type = 'date'} id="dream-date" onChange={event =>{setSearchDate(event.target.value)}}/>
+
         <select className='dream-search' id="dream-type" name="dream-type" onChange={event =>{setSearchType(event.target.value)}}>
             <option value="">Search by Dream Type</option>
             <option value="normal dream">Normal Dream</option>
@@ -104,28 +105,6 @@ export function ViewLogs({USERLOGIN,VIEWLOG,loaddream,bye}) {
             <option value="nightmare">Nightmare</option>
         </select>
         
-
-        <select className='dream-search' onChange={event =>{setSearchSubstance(event.target.value)}}>
-            <option value="">Search by Substance Type</option>
-            <option value="none">None</option>
-            <option value="stimulant">Stimulant</option>
-            <option value="opioid">Opioid</option>
-            <option value="depressant">Depressant</option>
-            <option value="hallucinogen">Hallucinogen</option>
-            <option value="dissociative">Dissociative</option>
-            <option value="inhalant">Inhalant</option>
-            <option value="cannabis">Cannabis</option>
-            <option value="other">Other</option>
-        </select>
-        
-
-
-
-
-
-
-        <input className='dream-search' placeholder="Search by Date"type="text" required onFocus={(e) => e.target.type = 'date'} id="dream-date" onChange={event =>{setSearchDate(event.target.value)}}/>
-
         <input className='dream-search' type= "text" placeholder="Search by Mood" onChange={event =>{setSearchMood(event.target.value)}}/>
         
         
@@ -180,6 +159,21 @@ export function ViewLogs({USERLOGIN,VIEWLOG,loaddream,bye}) {
             <option value="23.5">23.5</option>
             <option value="24">24.0</option>
         </select>
+
+        <select className='dream-search' onChange={event =>{setSearchSubstance(event.target.value)}}>
+            <option value="">Search by Substance Type</option>
+            <option value="none">None</option>
+            <option value="stimulant">Stimulant</option>
+            <option value="opioid">Opioid</option>
+            <option value="depressant">Depressant</option>
+            <option value="hallucinogen">Hallucinogen</option>
+            <option value="dissociative">Dissociative</option>
+            <option value="inhalant">Inhalant</option>
+            <option value="cannabis">Cannabis</option>
+            <option value="other">Other</option>
+        </select>
+
+
         </div>
 
 
@@ -207,7 +201,7 @@ export function ViewLogs({USERLOGIN,VIEWLOG,loaddream,bye}) {
 <th> Duration </th>
 <th> Substance </th>
 <th>Character</th>
-<th>Update</th>
+
 <th>Delete</th>
 {/* <th> Username </th> */}
 </tr>
@@ -242,14 +236,13 @@ return item
 <td>{item.duration}</td>
 <td>{item.substance}</td>
 <td>{item.charname}</td>
-<td><button className='add-btn'>Update Dream</button></td>
+
 <td><button id={i} onClick={() => handledelete(item)} className='add-btn'>Delete Dream</button></td>
-{/* <td>{item.username}</td> */}
   </tr>
 
 
 ))}
-):
+
 
 </tbody>
 </table>
@@ -264,4 +257,3 @@ return item
 }
 
 export default ViewLogs
-
