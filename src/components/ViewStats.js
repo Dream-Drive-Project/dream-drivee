@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 export function ViewStats({bye, loaddream}) {
     bye();
-
+    console.log(loaddream);
     // counts how many total dreams the user has recorded
     const total_dream_count = loaddream.length;
 
