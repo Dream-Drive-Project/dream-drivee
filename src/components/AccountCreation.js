@@ -55,7 +55,7 @@ const navigate = useNavigate();
 
    await  axios({
         method:"get",
-        url:"https://public/get.php",
+        url:"https://HEROKU_URI/public/get.php",
         params:{
             username:Accountdetails.username,
             
@@ -70,7 +70,7 @@ const navigate = useNavigate();
         if(data.data.username!=Accountdetails.username){
       
           //calls post method to use insert.php , and uses the object accountdetails to push in
-          axios.post("http://public/insert.php",Accountdetails)
+          axios.post("http://HEROKU_URI/public/insert.php",Accountdetails)
           .then(res=> console.log(res.data))
           .catch(error => {
             console.log(error.response)
