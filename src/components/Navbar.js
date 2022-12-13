@@ -14,8 +14,8 @@ export default function Navbar() {
             <CustomLink to="/dreamform">New Dream</CustomLink>
             <CustomLink to="/viewlogs">Logs</CustomLink>
             <CustomLink to="/viewstats">Stats</CustomLink>
-            <CustomLink to="/LogoutPage">Logout</CustomLink>
             <CustomLink to="/UserProfile">User profile</CustomLink>
+            <CustomLink to="/LogoutPage">Logout</CustomLink>
         </ul>
     </nav>
 }
