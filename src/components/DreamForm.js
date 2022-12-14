@@ -22,7 +22,7 @@ e.preventDefault();
 
 
 //post to insert dreams table
-axios.post("http://localhost/reactProject/insertDream.php", Dreamdetails)
+axios.post("/insertDream.php", Dreamdetails)
 .then(res=> {console.log(res.data)
 
 
@@ -30,7 +30,7 @@ axios.post("http://localhost/reactProject/insertDream.php", Dreamdetails)
 
     axios({
         method:"get",
-        url:"https://localhost/reactProject/ViewOneDream.php",
+        url:"/ViewOneDream.php",
         params:{
             username:Dreamdetails.username,
             character:Dreamdetails.characters,
@@ -51,12 +51,12 @@ axios.post("http://localhost/reactProject/insertDream.php", Dreamdetails)
             const data2={characters:Dreamdetails.characters,dreamid:data.data.dreamid, username:data.data.username};
            
 
-        axios.post("http://localhost/reactProject/insertCharacter.php",data2)
+        axios.post("/insertCharacter.php",data2)
         .then(res=> {console.log(res.data)
 
             axios({
                 method:"get",
-                url:"https://localhost/reactProject/Viewcharacterdream.php",
+                url:"/Viewcharacterdream.php",
                 params:{
                     username:Dreamdetails.username,
                     
