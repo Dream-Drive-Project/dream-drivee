@@ -83,7 +83,7 @@ else{
 
   axios({
     method:"get",
-    url:"https://localhost/reactProject/ViewcharacterDream.php",
+    url:"/ViewcharacterDream.php",
     params:{
         username:USERLOGIN.username,
         
