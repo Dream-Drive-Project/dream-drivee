@@ -37,7 +37,7 @@ useEffect(()=>{
 
       if (updatepassword.password.length >= 8 && updatepassword.password.length <= 16){
     console.log("CHECK HERE!!!");
-        axios.put('https://localhost/reactProject/UpdateAccountpassword.php',updatepassword)
+        axios.put('/UpdateAccountpassword.php',updatepassword)
         .then(Response =>{
            console.log(Response);
      setpassword({...updatepassword,password:''});
@@ -46,7 +46,7 @@ useEffect(()=>{
 
     axios({
         method:"get",
-        url:"https://localhost/reactProject/getuser.php",
+        url:"/getuser.php",
         params:{
             username:APILOGIN.username,
             
@@ -83,7 +83,7 @@ useEffect(()=>{
 
 const  handleemail = (id) => {    
 //     console.log("CHECK HERE!!!");
-axios.put('https://localhost/reactProject/UpdateAccountemail.php',updatepassword)
+axios.put('/UpdateAccountemail.php',updatepassword)
 .then(Response =>{
     console.log(Response);
     
@@ -93,7 +93,7 @@ axios.put('https://localhost/reactProject/UpdateAccountemail.php',updatepassword
 
      axios({
         method:"get",
-        url:"https://localhost/reactProject/getuser.php",
+        url:"/getuser.php",
         params:{
             username:APILOGIN.username,
             
