@@ -65,7 +65,7 @@ const submitHandler = e => {
 
   axios({
     method:"get",
-    url:"https://localhost/reactProject/get.php",
+    url:"/get.php",
     params:{
         username:Userdetails.username,
         
