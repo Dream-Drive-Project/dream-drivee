@@ -46,13 +46,13 @@ export function ViewLogs({USERLOGIN,VIEWLOG,loaddream, bye}) {
     //   console.log(e.target.id)
     // console.log(data2[e.target.id].dreamid)
      const payload = item.dreamid;
-     axios.delete('https://localhost/reactProject/DeleteDream.php',{data:{data:payload},})
+     axios.delete('/DeleteDream.php',{data:{data:payload},})
      .then(()=>{
 
 /// WITH THIS AXIOS GET TRYING TO UPDATE THE VALUE OF DATA2
       axios({
         method:"get",
-        url:"https://localhost/reactProject/Viewcharacterdream.php",
+        url:"/Viewcharacterdream.php",
         params:{
             username:item.username,
             
